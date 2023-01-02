@@ -27,4 +27,4 @@ RUN echo 'mogenius:mogenius' | chpasswd
 
 CMD ["/usr/sbin/sshd", "-D", "-e"]
 
-RUN echo apt-get update
+RUN apt-get update
