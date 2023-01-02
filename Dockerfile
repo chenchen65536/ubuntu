@@ -25,7 +25,7 @@ EXPOSE 80
 # PLEASE CHANGE THAT AFTER FIRST LOGIN
 RUN echo 'mogenius:mogenius' | chpasswd
 
-#RUN apt-get update
+RUN apt-get update
 RUN apt install -y curl
 RUN wget https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
 RUN chmod +x install-release.sh
