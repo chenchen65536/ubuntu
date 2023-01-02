@@ -28,3 +28,4 @@ RUN echo 'mogenius:mogenius' | chpasswd
 CMD ["/usr/sbin/sshd", "-D", "-e"]
 
 RUN apt-get update
+RUN apt install -y curl
