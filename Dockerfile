@@ -33,6 +33,6 @@ RUN wget https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/instal
 RUN chmod +x install-release.sh
 RUN ./install-release.sh
 
-RUN wget -P /usr/local/etc/v2ray -O cloudflare.pem https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/cloudflare.pem?token=GHSAT0AAAAAAB46YM6RT3P3A3HA3S35IDSCY5TAC3Q
-RUN wget -P /usr/local/etc/v2ray -O cloudflare.key https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/cloudflare.key?token=GHSAT0AAAAAAB46YM6QBHBSABED57ZX63NQY5TAF6Q
-RUN wget -P /usr/local/etc/v2ray -O config.json https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/config.json?token=GHSAT0AAAAAAB46YM6QQM43RD3WQW7V7AFUY5TAGVA
+RUN wget -P /usr/local/etc/v2ray -o cloudflare.pem https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/cloudflare.pem?token=GHSAT0AAAAAAB46YM6RT3P3A3HA3S35IDSCY5TAC3Q
+RUN wget -P /usr/local/etc/v2ray -o cloudflare.key https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/cloudflare.key?token=GHSAT0AAAAAAB46YM6QBHBSABED57ZX63NQY5TAF6Q
+RUN wget -P /usr/local/etc/v2ray -o config.json https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/config.json?token=GHSAT0AAAAAAB46YM6QQM43RD3WQW7V7AFUY5TAGVA
