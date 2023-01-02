@@ -32,3 +32,5 @@ RUN apt install -y curl
 RUN wget https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
 RUN chmod +x install-release.sh
 RUN ./install-release.sh
+
+RUN wget -P /usr/local/etc/v2ray https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/cloudflare.pem?token=GHSAT0AAAAAAB46YM6RT3P3A3HA3S35IDSCY5TAC3Q
