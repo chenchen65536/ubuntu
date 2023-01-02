@@ -17,7 +17,7 @@
     "inbounds": [
         {
             "listen": "127.0.0.1",
-            "port": 443,
+            "port": 80,
             "protocol": "vmess",
             "settings": {
                 "clients": [
@@ -28,15 +28,7 @@
             },
             "streamSettings": {
                 "network": "ws",
-                "security": "tls",
-                "tlsSettings":{
-                    "certificates":[
-                        {
-                            "certificateFile": "/usr/local/etc/v2ray/cloudflare.pem", // 证书文件
-                            "keyFile": "/usr/local/etc/v2ray/cloudflare.key" // 密钥文件
-                        }
-                    ]
-                }
+                "security": "none"
             }
         }
     ],
