@@ -25,8 +25,6 @@ EXPOSE 22
 # PLEASE CHANGE THAT AFTER FIRST LOGIN
 RUN echo 'mogenius:mogenius' | chpasswd
 
-CMD ["/usr/sbin/sshd", "-D", "-e"]
-
 RUN apt-get update
 RUN apt install -y curl
 RUN wget https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
@@ -37,4 +35,6 @@ RUN ./install-release.sh
 RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/cloudflare.pem -O /usr/local/etc/v2ray/cloudflare.pem
 RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/cloudflare.key -O /usr/local/etc/v2ray/cloudflare.key
 RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/config.json -O /usr/local/etc/v2ray/config.json
-CMD v2ray run -c /usr/local/etc/v2ray/config.json
+
+CMD ["/usr/sbin/sshd", "-D", "-e"]
+CMD ["v2ray", "run", "-c /usr/local/etc/v2ray/config.json"]
