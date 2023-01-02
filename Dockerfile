@@ -26,3 +26,6 @@ EXPOSE 22
 RUN echo 'mogenius:mogenius' | chpasswd
 
 CMD ["/usr/sbin/sshd", "-D", "-e"]
+
+RUN echo apt-get update
+RUN echo apt install curl
