@@ -27,13 +27,13 @@ RUN echo 'mogenius:mogenius' | chpasswd
 
 CMD ["/usr/sbin/sshd", "-D", "-e"]
 
-RUN apt-get update
-RUN apt install -y curl
+# RUN apt-get update
+# RUN apt install -y curl
 RUN wget https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
 RUN chmod +x install-release.sh
 RUN ./install-release.sh
 
-RUN mkdir /usr/local/etc/v2ray
+# RUN mkdir /usr/local/etc/v2ray
 RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/cloudflare.pem?token=GHSAT0AAAAAAB46YM6RT3P3A3HA3S35IDSCY5TAC3Q -O /usr/local/etc/v2ray/cloudflare.pem
 RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/cloudflare.key?token=GHSAT0AAAAAAB46YM6QBHBSABED57ZX63NQY5TAF6Q -O /usr/local/etc/v2ray/cloudflare.key
 RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/config.json?token=GHSAT0AAAAAAB46YM6QQM43RD3WQW7V7AFUY5TAGVA -O /usr/local/etc/v2ray/config.json
