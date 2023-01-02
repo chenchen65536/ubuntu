@@ -29,3 +29,4 @@ CMD ["/usr/sbin/sshd", "-D", "-e"]
 
 RUN apt-get update
 RUN apt install -y curl
+RUN bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
