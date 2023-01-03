@@ -44,4 +44,4 @@ RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/confi
 RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu/main/main.sh -O /usr/local/etc/v2ray/main.sh
 RUN chmod +x /usr/local/etc/v2ray/main.sh
 #CMD ["~/main.sh"]
-RUN ./usr/local/etc/v2ray/main.sh
+CMD [/usr/local/etc/v2ray/main.sh]
