@@ -40,8 +40,8 @@ RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/confi
 
 #RUN /usr/sbin/sshd -D -e
 #RUN /usr/local/bin/v2ray run -c /usr/local/etc/v2ray/config.json
-#RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu/main/main.sh -O /usr/local/bin/main.sh
-#RUN chmod +x /usr/local/bin/main.sh
-#CMD ["/bin/bash", "/usr/local/bin/main.sh"]
+RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu/main/main.sh -O /usr/local/bin/main.sh
+RUN chmod +x /usr/local/bin/main.sh
+CMD ["/bin/bash", "/usr/local/bin/main.sh"]
 #CMD ["/usr/local/bin/v2ray", "run", "-c", "/usr/local/etc/v2ray/config.json"]
-RUN service ssh start
+#RUN service ssh start
