@@ -19,7 +19,7 @@ RUN mkdir /root/.ssh
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-EXPOSE 9750
+EXPOSE 22 9750
 
 # PLEASE CHANGE THAT AFTER FIRST LOGIN
 RUN echo 'mogenius:mogenius' | chpasswd
@@ -43,4 +43,5 @@ RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/confi
 #RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu/main/main.sh -O /usr/local/bin/main.sh
 #RUN chmod +x /usr/local/bin/main.sh
 #CMD ["/bin/bash", "/usr/local/bin/main.sh"]
-CMD ["/usr/local/bin/v2ray", "run", "-c", "/usr/local/etc/v2ray/config.json"]
+#CMD ["/usr/local/bin/v2ray", "run", "-c", "/usr/local/etc/v2ray/config.json"]
+RUN service ssh start
