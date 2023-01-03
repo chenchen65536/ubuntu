@@ -17,7 +17,7 @@
     "inbounds": [
         {
             "listen": "127.0.0.1",
-            "port": 80,
+            "port": 9750,
             "protocol": "vmess",
             "settings": {
                 "clients": [
