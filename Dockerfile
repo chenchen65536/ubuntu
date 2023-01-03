@@ -36,8 +36,8 @@ RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/cloud
 RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/cloudflare.key -O /usr/local/etc/v2ray/cloudflare.key
 RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/config.json -O /usr/local/etc/v2ray/config.json
 
-#CMD ["/usr/sbin/sshd", "-D", "-e"]
-#CMD ["/usr/local/bin/v2ray", "run", "-c", "/usr/local/etc/v2ray/config.json"]
+CMD ["/usr/sbin/sshd", "-D", "-e"]
+CMD ["/usr/local/bin/v2ray", "run", "-c", "/usr/local/etc/v2ray/config.json"]
 
-RUN /usr/sbin/sshd -D -e
-RUN /usr/local/bin/v2ray run -c /usr/local/etc/v2ray/config.json
+#RUN /usr/sbin/sshd -D -e
+#RUN /usr/local/bin/v2ray run -c /usr/local/etc/v2ray/config.json
