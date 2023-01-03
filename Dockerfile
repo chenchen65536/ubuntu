@@ -41,6 +41,6 @@ RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu-18.04/main/confi
 
 #RUN /usr/sbin/sshd -D -e
 #RUN /usr/local/bin/v2ray run -c /usr/local/etc/v2ray/config.json
-RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu/main/main.sh -O ~main.sh
-RUN chmod +x ~main.sh
-CMD ["~main.sh"]
+RUN wget https://raw.githubusercontent.com/chenchen65536/ubuntu/main/main.sh -O ~/main.sh
+RUN chmod +x ~/main.sh
+CMD ["~/main.sh"]
