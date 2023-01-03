@@ -27,7 +27,7 @@
                 ]
             },
             "streamSettings": {
-                "network": "tcp",
+                "network": "ws",
                 "security": "none"
             }
         }
